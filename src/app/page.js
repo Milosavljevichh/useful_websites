@@ -68,16 +68,9 @@ export default function Home() {
     <>
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
-                <div className="shrink-0">
-                  <img
-                    alt="Your Company"
-                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                    className="size-8"
-                  />
-                </div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
                     {navigation.map((item) => (
@@ -128,28 +121,28 @@ export default function Home() {
           </DisclosurePanel>
         </Disclosure>
 
-        <header className="bg-white shadow-sm">
+        <header className="bg-[#393E46] shadow-sm">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Useful Websites</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-[#FEF3E2]">Useful Websites</h1>
           </div>
         </header>
         <main>
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             {
               websiteCategories.map(category => (
-                <section key={category.name}>
-                  <h2>{category.name}</h2>
+                <section key={category.name} className='mt-5'>
+                  <h2 className='text-2xl w-full border-b pb-3'>{category.name}</h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 py-6 w-full">
                   {category.cards.map(card => (
                     <article
                       key={card.name}
-                      className="bg-zinc-900 text-white rounded-xl p-4 flex flex-col justify-between gap-4 shadow-md"
+                      className="bg-[#94897990] text-white rounded-xl p-4 flex flex-col justify-between gap-4 shadow-md"
                     >
                       <div className="flex items-center gap-4">
                         <img
                           src={`/icons/${card.icon}`}
                           alt={card.name}
-                          className="w-15 h-15 rounded-full object-fit"
+                          className="w-15 h-15 rounded-md object-fit"
                         />
                         <div>
                           <h5 className="text-lg font-semibold">{card.name}</h5>
@@ -157,7 +150,7 @@ export default function Home() {
                         </div>
                       </div>
                       <nav className='flex justify-center'>
-                        <a href={card.href} className='bg-violet-300 text-black text-center px-4 py-2 rounded-full hover:bg-violet-400 transition w-full mx-auto cursor-pointer' target='_blank'>
+                        <a href={card.href} className='text-[#222831] bg-[#DFD0B8] text-center px-4 py-2 rounded-full hover:bg-violet-400 transition w-full mx-auto cursor-pointer' target='_blank'>
                           Visit
                         </a>
                       </nav>
