@@ -13,7 +13,7 @@ const websiteCategories = [
     cards: [
       { name: 'Auto draw', href: 'https://autodraw.com/', description: 'AutoDraw pairs machine learning with drawings from talented artists to help you draw stuff fast.', icon: 'pen.png' },
       { name: 'PicWish', href: 'https://picwish.com', description: 'AI-powered background remover and image editing tool.', icon: 'picwish.png' },
-      { name: 'WebGremlin', href: 'https://webgremlin.ai', description: 'AI assistant to test your website automatically.', icon: 'webgremlin.png' },
+      { name: 'WebGremlin', href: 'https://webgremlin.ai', description: 'AI assistant to automate your agency website.', icon: 'webgremlin.png' },
       { name: 'ChatLLM by Abacus', href: 'https://chatllm.abacus.ai', description: 'Chat with customizable LLMs using Abacus.', icon: 'chatllm.png' },
       { name: 'Napkin', href: 'https://napkin.ai', description: 'AI tool for generating visuals.', icon: 'napkin.png' },
       { name: 'Chef by Convex', href: 'https://chef.convex.dev', description: 'AI to generate backend logic for Convex apps.', icon: 'chef.png' },
@@ -23,29 +23,28 @@ const websiteCategories = [
   {
     name: 'Learning Platforms',
     cards: [
-      { name: 'HackSplaining', href: 'https://www.hacksplaining.com', description: 'Interactive tutorials on web security threats.', icon: 'hacksplaining.png' },
-      { name: 'Spoken.io', href: 'https://spoken.io', description: 'Interactive learning for spoken languages.', icon: 'spoken.png' },
+      { name: 'HackSplaining', href: 'https://www.hacksplaining.com', description: 'Interactive tutorials on web security threats.', icon: 'hacker.png' },
+      { name: 'Spoken.io', href: 'https://spoken.io', description: 'Compare prices for the product you want to buy.', icon: 'spoken.png' },
       { name: 'SchoolGoat', href: 'https://schoolgoat.com', description: 'An all-in-one AI-powered study assistant.', icon: 'schoolgoat.png' },
-      { name: 'Sesame', href: 'https://sesame.com', description: 'Platform for hosting and sharing online courses.', icon: 'sesame.png' },
-      { name: 'Imagine Explainers', href: 'https://imagineexplainers.com', description: 'Visual and animated explainers for complex topics.', icon: 'imagine.png' },
+      { name: 'Sesame', href: 'https://sesame.com', description: 'Start a call with a life-like AI.', icon: 'sesame.png' },
+      { name: 'Imagine Explainers', href: 'https://imagineexplainers.com', description: 'Generate an interactive video on any topic.', icon: 'imagine.png' },
       { name: 'Class Central', href: 'https://classcentral.com', description: 'Aggregator for online courses and MOOCs.', icon: 'classcentral.png' },
     ]
   },
   {
     name: 'Developer Tools',
     cards: [
-      { name: 'SEO Studio Tools', href: 'https://seostudio.tools', description: 'Free SEO tools like meta analyzers, keyword checkers.', icon: 'seostudio.png' },
+      { name: 'SEO Studio Tools', href: 'https://seostudio.tools', description: 'Free SEO tools like meta analyzers, keyword checkers.', icon: 'seotools.png' },
       { name: 'QuickRef', href: 'https://quickref.me', description: 'Fast-access cheat sheets for devs.', icon: 'quickref.png' },
-      { name: 'Watabou Tools', href: 'https://watabou.github.io', description: 'RPG tools like fantasy map generators and dungeon generators.', icon: 'watabou.png' }
+      { name: 'Watabou Tools', href: 'https://watabou.github.io', description: 'RPG tools like fantasy map generators and dungeon generators.', icon: 'map.png' }
     ]
   },
   {
     name: 'Entertainment & Fun',
     cards: [
-      { name: 'Dungeon Crawl', href: 'https://dungeoncrawl.com', description: 'Browser game with roguelike dungeon crawling.', icon: 'dungeoncrawl.png' },
-      { name: 'GetYarn', href: 'https://getyarn.io', description: 'Search quotes from movies and shows with video snippets.', icon: 'getyarn.png' },
+      { name: 'GetYarn', href: 'https://getyarn.io', description: 'Search quotes from movies and shows with video snippets.', icon: 'yarn.png' },
       { name: 'AirConsole', href: 'https://airconsole.com', description: 'Play multiplayer games using your phone as a controller.', icon: 'airconsole.png' },
-      { name: 'Tools', href: 'https://tooooools.app', description: 'Apply image effects.', icon: 'tooooools.png' },
+      { name: 'Tools', href: 'https://tooooools.app', description: 'Apply image effects.', icon: 'tools.png' },
     ]
   },
   {
@@ -53,7 +52,7 @@ const websiteCategories = [
     cards: [
       { name: 'FlowCV', href: 'https://flowcv.com', description: 'Build and share beautiful resumes easily.', icon: 'flowcv.png' },
       { name: 'Ssemble', href: 'https://ssemble.com', description: 'Online collaborative video editor.', icon: 'ssemble.png' },
-      { name: 'Weights', href: 'https://weights.com', description: 'Track your workouts and training progress.', icon: 'weights.png' }
+      { name: 'Weights', href: 'https://weights.com', description: 'Create any content with AI and train your models.', icon: 'weights.png' }
     ]
   }
 ]
