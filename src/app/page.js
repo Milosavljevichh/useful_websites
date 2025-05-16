@@ -1,12 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const user = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-}
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
   { name: 'About', href: '#', current: false },
@@ -14,10 +8,56 @@ const navigation = [
   { name: 'Make my day', href: '#', current: false },
 ]
 const websiteCategories = [
-  { name: 'AI tools', cards:[
-    { name: 'Auto draw', href: 'https://autodraw.com/', description: 'AutoDraw pairs machine learning with drawings from talented artists to help you draw stuff fast.', icon: 'pen.png' },
-    ]},
+  {
+    name: 'AI Tools',
+    cards: [
+      { name: 'Auto draw', href: 'https://autodraw.com/', description: 'AutoDraw pairs machine learning with drawings from talented artists to help you draw stuff fast.', icon: 'pen.png' },
+      { name: 'PicWish', href: 'https://picwish.com', description: 'AI-powered background remover and image editing tool.', icon: 'picwish.png' },
+      { name: 'WebGremlin', href: 'https://webgremlin.ai', description: 'AI assistant to test your website automatically.', icon: 'webgremlin.png' },
+      { name: 'ChatLLM by Abacus', href: 'https://chatllm.abacus.ai', description: 'Chat with customizable LLMs using Abacus.', icon: 'chatllm.png' },
+      { name: 'Napkin', href: 'https://napkin.ai', description: 'AI tool for generating visuals.', icon: 'napkin.png' },
+      { name: 'Chef by Convex', href: 'https://chef.convex.dev', description: 'AI to generate backend logic for Convex apps.', icon: 'chef.png' },
+      { name: 'Gamma', href: 'https://gamma.app', description: 'Create beautiful presentations with AI assistance.', icon: 'gamma.png' }
+    ]
+  },
+  {
+    name: 'Learning Platforms',
+    cards: [
+      { name: 'HackSplaining', href: 'https://www.hacksplaining.com', description: 'Interactive tutorials on web security threats.', icon: 'hacksplaining.png' },
+      { name: 'Spoken.io', href: 'https://spoken.io', description: 'Interactive learning for spoken languages.', icon: 'spoken.png' },
+      { name: 'SchoolGoat', href: 'https://schoolgoat.com', description: 'An all-in-one AI-powered study assistant.', icon: 'schoolgoat.png' },
+      { name: 'Sesame', href: 'https://sesame.com', description: 'Platform for hosting and sharing online courses.', icon: 'sesame.png' },
+      { name: 'Imagine Explainers', href: 'https://imagineexplainers.com', description: 'Visual and animated explainers for complex topics.', icon: 'imagine.png' },
+      { name: 'Class Central', href: 'https://classcentral.com', description: 'Aggregator for online courses and MOOCs.', icon: 'classcentral.png' },
+    ]
+  },
+  {
+    name: 'Developer Tools',
+    cards: [
+      { name: 'SEO Studio Tools', href: 'https://seostudio.tools', description: 'Free SEO tools like meta analyzers, keyword checkers.', icon: 'seostudio.png' },
+      { name: 'QuickRef', href: 'https://quickref.me', description: 'Fast-access cheat sheets for devs.', icon: 'quickref.png' },
+      { name: 'Watabou Tools', href: 'https://watabou.github.io', description: 'RPG tools like fantasy map generators and dungeon generators.', icon: 'watabou.png' }
+    ]
+  },
+  {
+    name: 'Entertainment & Fun',
+    cards: [
+      { name: 'Dungeon Crawl', href: 'https://dungeoncrawl.com', description: 'Browser game with roguelike dungeon crawling.', icon: 'dungeoncrawl.png' },
+      { name: 'GetYarn', href: 'https://getyarn.io', description: 'Search quotes from movies and shows with video snippets.', icon: 'getyarn.png' },
+      { name: 'AirConsole', href: 'https://airconsole.com', description: 'Play multiplayer games using your phone as a controller.', icon: 'airconsole.png' },
+      { name: 'Tools', href: 'https://tooooools.app', description: 'Apply image effects.', icon: 'tooooools.png' },
+    ]
+  },
+  {
+    name: 'Career & Productivity',
+    cards: [
+      { name: 'FlowCV', href: 'https://flowcv.com', description: 'Build and share beautiful resumes easily.', icon: 'flowcv.png' },
+      { name: 'Ssemble', href: 'https://ssemble.com', description: 'Online collaborative video editor.', icon: 'ssemble.png' },
+      { name: 'Weights', href: 'https://weights.com', description: 'Track your workouts and training progress.', icon: 'weights.png' }
+    ]
+  }
 ]
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -99,11 +139,11 @@ export default function Home() {
               websiteCategories.map(category => (
                 <section key={category.name}>
                   <h2>{category.name}</h2>
-                  <div className="mx-auto max-w-7xl flex flex-wrap gap-7 px-0 py-6 sm:px-0 lg:px-0">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 py-6 w-full">
                   {category.cards.map(card => (
                     <article
                       key={card.name}
-                      className="bg-zinc-900 text-white rounded-xl p-4 flex flex-col gap-4 w-full max-w-sm shadow-md"
+                      className="bg-zinc-900 text-white rounded-xl p-4 flex flex-col justify-between gap-4 shadow-md"
                     >
                       <div className="flex items-center gap-4">
                         <img
@@ -117,9 +157,9 @@ export default function Home() {
                         </div>
                       </div>
                       <nav className='flex justify-center'>
-                        <button className="bg-violet-300 text-black px-4 py-2 rounded-full hover:bg-violet-400 transition w-100 mx-auto">
+                        <a href={card.href} className='bg-violet-300 text-black text-center px-4 py-2 rounded-full hover:bg-violet-400 transition w-full mx-auto cursor-pointer' target='_blank'>
                           Visit
-                        </button>
+                        </a>
                       </nav>
                     </article>
 
