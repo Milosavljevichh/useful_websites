@@ -54,6 +54,14 @@ const websiteCategories = [
       { name: 'Ssemble', href: 'https://ssemble.com', description: 'Online collaborative video editor.', icon: 'ssemble.png' },
       { name: 'Weights', href: 'https://weights.com', description: 'Create any content with AI and train your models.', icon: 'weights.png' }
     ]
+  },
+  {
+    name: 'PDF Books',
+    cards: [
+      { name: 'AI Agents - Open AI', href: '/pdf/apracticalguidetobuildingagents_copy.pdf', description: 'Understand what AI agents are and how to build them.', icon: 'pdf.png' },
+      { name: 'Game AI Pro', href: 'https://www.gameaipro.com/', description: 'Understand AI behaviour in video games and learn to implement them.', icon: 'pdf.png' },
+      { name: 'The Linux Command Line', href: '/pdf/TLCL-19.01.pdf', description: 'Helps you to start out with linux.', icon: 'pdf.png' },
+    ]
   }
 ]
 
