@@ -29,6 +29,7 @@ const websiteCategories = [
       { name: 'Sesame', href: 'https://sesame.com', description: 'Start a call with a life-like AI.', icon: 'sesame.png' },
       { name: 'Imagine Explainers', href: 'https://imagineexplainers.com', description: 'Generate an interactive video on any topic.', icon: 'imagine.png' },
       { name: 'Class Central', href: 'https://classcentral.com', description: 'Aggregator for online courses and MOOCs.', icon: 'classcentral.png' },
+      { name: 'AlgoMap.io', href: 'https://algomap.io/', description: 'Free Data Structures & Algorithms Roadmap.', icon: 'algorithm.png' },
     ]
   },
   {
@@ -36,7 +37,9 @@ const websiteCategories = [
     cards: [
       { name: 'SEO Studio Tools', href: 'https://seostudio.tools', description: 'Free SEO tools like meta analyzers, keyword checkers.', icon: 'seotools.png' },
       { name: 'QuickRef', href: 'https://quickref.me', description: 'Fast-access cheat sheets for devs.', icon: 'quickref.png' },
-      { name: 'Watabou Tools', href: 'https://watabou.github.io', description: 'RPG tools like fantasy map generators and dungeon generators.', icon: 'map.png' }
+      { name: 'Watabou Tools', href: 'https://watabou.github.io', description: 'RPG tools like fantasy map generators and dungeon generators.', icon: 'map.png' },
+      { name: 'FSM Visualizer', href: 'https://fsm.alhassan.dev/', description: 'A tool to help you visualize your fsm & states.', icon: 'configurations.png' },
+      { name: 'State Diagram Generator', href: 'https://www.eraser.io/ai/state-diagram-generator', description: 'AI State Diagram Generator.', icon: 'configurations.png' }
     ]
   },
   {
