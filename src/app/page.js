@@ -9,6 +9,7 @@ const websiteCategories = [
       { name: 'ChatLLM by Abacus', href: 'https://chatllm.abacus.ai', description: 'Chat with customizable LLMs using Abacus.', icon: 'chatllm.png' },
       { name: 'Napkin', href: 'https://napkin.ai', description: 'AI tool for generating visuals.', icon: 'napkin.png' },
       { name: 'Chef by Convex', href: 'https://chef.convex.dev', description: 'AI to generate backend logic for Convex apps.', icon: 'chef.png' },
+      { name: 'Emergnet', href: 'https://app.emergent.sh/', description: 'AI to build your app ideas.', icon: 'emergent.png' },
       { name: 'Gamma', href: 'https://gamma.app', description: 'Create beautiful presentations with AI assistance.', icon: 'gamma.png' }
     ]
   },
@@ -47,6 +48,7 @@ const websiteCategories = [
     cards: [
       { name: 'FlowCV', href: 'https://flowcv.com', description: 'Build and share beautiful resumes easily.', icon: 'flowcv.png' },
       { name: 'Ssemble', href: 'https://ssemble.com', description: 'Online collaborative video editor.', icon: 'ssemble.png' },
+      { name: 'Mindcraftor', href: 'https://mindcraftor.ai/', description: 'AI that helps you come up with business ideas.', icon: 'mindcraftor.png' },
       { name: 'Weights', href: 'https://weights.com', description: 'Create any content with AI and train your models.', icon: 'weights.png' }
     ]
   },
@@ -55,6 +57,7 @@ const websiteCategories = [
     cards: [
       { name: 'AI Agents - Open AI', href: '/pdf/apracticalguidetobuildingagents_copy.pdf', description: 'Understand what AI agents are and how to build them.', icon: 'pdf.png' },
       { name: 'Game AI Pro', href: 'https://www.gameaipro.com/', description: 'Understand AI behaviour in video games and learn to implement them.', icon: 'pdf.png' },
+      { name: 'Sumreads', href: 'https://www.sumreads.com/index.html', description: 'Website which holds a collection of summarized books.', icon: 'sumreads.png' },
       { name: 'The Linux Command Line', href: '/pdf/TLCL-19.01.pdf', description: 'Helps you to start out with linux.', icon: 'pdf.png' },
     ]
   }
