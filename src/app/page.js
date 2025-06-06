@@ -32,7 +32,16 @@ const websiteCategories = [
       { name: 'QuickRef', href: 'https://quickref.me', description: 'Fast-access cheat sheets for devs.', icon: 'quickref.png' },
       { name: 'Watabou Tools', href: 'https://watabou.github.io', description: 'RPG tools like fantasy map generators and dungeon generators.', icon: 'map.png' },
       { name: 'FSM Visualizer', href: 'https://fsm.alhassan.dev/', description: 'A tool to help you visualize your fsm & states.', icon: 'configurations.png' },
-      { name: 'State Diagram Generator', href: 'https://www.eraser.io/ai/state-diagram-generator', description: 'AI State Diagram Generator.', icon: 'configurations.png' }
+      { name: 'State Diagram Generator', href: 'https://www.eraser.io/ai/state-diagram-generator', description: 'AI State Diagram Generator.', icon: 'configurations.png' },
+      { name: 'Stay', href: 'https://staying.fun/en', description: 'Visualize Data Structures & Algorithms in Real Time, an  interactive tool for students, educators, and developers.', icon: 'stay.png' },
+      { name: 'Snazzy Maps', href: 'https://snazzymaps.com/', description: 'Snazzy Maps is a repository of different styles for Google Maps aimed towards web designers and developers.', icon: 'snazzymaps.png' },
+    ]
+  },
+  {
+    name: 'API',
+    cards: [
+      { name: 'Api Vault', href: 'https://apivault.dev/', description: 'Your Gateway To A World Of Public APIs.', icon: 'apivault.png' },
+      
     ]
   },
   {
