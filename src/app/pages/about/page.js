@@ -14,6 +14,7 @@ export default function About(){
             <h4 className="text-xl">- Other links:</h4>
             <ul className="text-l px-6">
                 <li className="underline">Game development: <span className="italic">Coming Soon</span></li>
+                <li className="underline"><Link href={"https://updated-portfolio-two-navy.vercel.app/"} target="_blank">Portfolio</Link></li>
                 <li className="underline"><Link href={"https://github.com/Milosavljevichh"} target="_blank">Github</Link></li>
                 <li className="underline"><Link href={"#"} target="_blank">Buy me a coffee</Link></li>
             </ul>

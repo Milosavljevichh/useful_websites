@@ -3,6 +3,7 @@ const websiteCategories = [
   {
     name: 'AI Tools',
     cards: [
+      { name:'Relume', href:'https://www.relume.io/?via=filatovdesign', description:'Use AI as your design support, not replacement.', icon:'relume.png'},
       { name: 'Auto draw', href: 'https://autodraw.com/', description: 'AutoDraw pairs machine learning with drawings from talented artists to help you draw stuff fast.', icon: 'pen.png' },
       { name: 'PicWish', href: 'https://picwish.com', description: 'AI-powered background remover and image editing tool.', icon: 'picwish.png' },
       { name: 'WebGremlin', href: 'https://webgremlin.ai', description: 'AI assistant to automate your agency website.', icon: 'webgremlin.png' },
@@ -69,6 +70,14 @@ const websiteCategories = [
       { name: 'Sumreads', href: 'https://www.sumreads.com/index.html', description: 'Website which holds a collection of summarized books.', icon: 'sumreads.png' },
       { name: 'The Linux Command Line', href: '/pdf/TLCL-19.01.pdf', description: 'Helps you to start out with linux.', icon: 'pdf.png' },
     ]
+  },
+  {
+    name: 'Guides & Ideas',
+    cards: [
+      { name:'Real Portfolio Projects', href: 'https://www.notion.so/Real-Portfolio-Projects-2064506bf391808b9d56c655b742671d', description:'Project ideas that employers actually want to see.', icon:'online.png'},
+      { name:'Streamline your web design process', href:'https://chipped-hurricane-6fb.notion.site/Streamline-your-web-design-process-with-Relume-AI-1ae4c03f852a802b98b1f0894c4d5daa', description:'With Relume AI, you can go from idea to fully structured wireframe and visual concepts in just minutes.', icon:'online.png'}
+      
+    ]
   }
 ]
 
@@ -88,7 +97,7 @@ export default function Home() {
                       key={card.name}
                       className="bg-[#94897990] text-white rounded-xl p-4 flex flex-col justify-between gap-4 shadow-md"
                     >
-                      <div className="flex items-center gap-4">
+                      <div className="h-full flex items-center gap-4 items-center">
                         <img
                           src={`/icons/${card.icon}`}
                           alt={card.name}
