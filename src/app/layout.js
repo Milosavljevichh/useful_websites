@@ -26,7 +26,9 @@ export default function RootLayout({ children }) {
       >
         <main>
           <EmotionProvider>
-          <ResponsiveDrawer children={children} />
+            <ResponsiveDrawer>
+              {children}
+            </ResponsiveDrawer>
           </EmotionProvider>
         </main>
       </body>
