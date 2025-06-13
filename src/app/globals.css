@@ -23,4 +23,24 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.parentDiv{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.dashboard{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -20px;
+    right: -20px; 
+    overflow: scroll;
 }

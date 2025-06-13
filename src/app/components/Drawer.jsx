@@ -19,6 +19,7 @@ import Typography from '@mui/material/Typography';
 import { Dashboard } from '@mui/icons-material';
 import InfoIcon from '@mui/icons-material/Info';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { websiteCategories } from '../data/Websites';
 
 const drawerWidth = 240;
 
@@ -43,22 +44,20 @@ function ResponsiveDrawer(props) {
         }
     };
     let navigation = [
-        { name: 'Dashboard', href: '/', icon:<Dashboard /> },
-        { name: 'About', href: '/pages/about', icon:<InfoIcon /> },
-        { name: 'Make my day', href: '#', icon:<FavoriteIcon /> },
+        { name: 'Dashboard', href: '/', icon: <Dashboard /> },
+        { name: 'About', href: '/pages/about', icon: <InfoIcon /> },
+        { name: 'Make my day', href: '#', icon: <FavoriteIcon /> },
     ]
 
     const drawer = (
-        <div>
-            <Toolbar variant='dense' />
-            {/* <Divider color="white" width="90%" sx={{margin:'0 auto'}} /> */}
+        <Box sx={{overflowY: 'auto',scrollbarWidth:'none',}}>
             <List>
-                <Typography variant='h6' fontWeight={'bold'} px={2} mb={3}>Menu</Typography>
+                <Typography variant='h6' fontWeight={'bold'} px={2} my={2}>Menu</Typography>
                 {navigation.map((link, index) => (
                     <ListItem key={link.name} disablePadding>
                         <ListItemButton
                             href={link.href}>
-                            <ListItemIcon sx={{color:'white'}}>
+                            <ListItemIcon sx={{ color: 'white' }}>
                                 {link.icon}
                             </ListItemIcon>
                             <ListItemText
@@ -67,21 +66,29 @@ function ResponsiveDrawer(props) {
                     </ListItem>
                 ))}
             </List>
-            <Divider color="white" width="80%" sx={{margin:'16px auto'}} />
+            <Divider color="white" width="80%" sx={{ margin: '16px auto' }} />
             <List>
-                <Typography variant='h6' fontWeight={'bold'} px={2} mb={3}>Categories</Typography>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon sx={{ color:"white"}}>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <Typography variant='h6' fontWeight={'bold'} px={2} mb={2}>Categories</Typography>
+                {websiteCategories.map((categories, index) => (
+                    <ListItem key={categories.name} disablePadding>
+                        <ListItemButton
+
+                            onClick={() => {
+                                const el = document.getElementById(categories.name);
+                                if (el) {
+                                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                            }}
+                        >
+                            <ListItemIcon sx={{ color: "white" }}>
+                                {categories.icon}
                             </ListItemIcon>
-                            <ListItemText primary={text} />
+                            <ListItemText primary={categories.name} />
                         </ListItemButton>
                     </ListItem>
                 ))}
             </List>
-        </div>
+        </Box>
     );
 
     return (
@@ -93,7 +100,7 @@ function ResponsiveDrawer(props) {
                     ml: { sm: `${drawerWidth}px` },
                 }}
             >
-                <Toolbar sx={{backgroundColor:'#182131'}}>
+                <Toolbar sx={{ backgroundColor: '#182131' }}>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -103,7 +110,7 @@ function ResponsiveDrawer(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap component="div">
+                    <Typography variant="h4" noWrap component="div" fontWeight={'bold'}>
                         Useful Websites
                     </Typography>
                 </Toolbar>
@@ -122,7 +129,7 @@ function ResponsiveDrawer(props) {
                     onClose={handleDrawerClose}
                     sx={{
                         display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#1E2939', color:'white', borderRight:'1px solid white' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#1E2939', color: 'white', borderRight: '1px solid white' },
                     }}
                     slotProps={{
                         root: {
@@ -136,7 +143,7 @@ function ResponsiveDrawer(props) {
                     variant="permanent"
                     sx={{
                         display: { xs: 'none', sm: 'block' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#182131', color:'white', borderRight:'1px solid white' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#182131', color: 'white', borderRight: '1px solid white' },
                     }}
                     open
                 >
