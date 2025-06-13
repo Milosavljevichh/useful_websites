@@ -24,6 +24,7 @@ const websiteCategories = [
       { name: 'Imagine Explainers', href: 'https://imagineexplainers.com', description: 'Generate an interactive video on any topic.', icon: 'imagine.png' },
       { name: 'Class Central', href: 'https://classcentral.com', description: 'Aggregator for online courses and MOOCs.', icon: 'classcentral.png' },
       { name: 'AlgoMap.io', href: 'https://algomap.io/', description: 'Free Data Structures & Algorithms Roadmap.', icon: 'algorithm.png' },
+      { name: 'Learn Git Branching', href: 'https://learngitbranching.js.org/', description: 'Interactive online tool to help you visually understand how git branching works.', icon: 'gitbranching.png' },
     ]
   },
   {
