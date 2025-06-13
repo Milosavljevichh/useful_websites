@@ -16,6 +16,9 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { Dashboard } from '@mui/icons-material';
+import InfoIcon from '@mui/icons-material/Info';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const drawerWidth = 240;
 
@@ -39,31 +42,24 @@ function ResponsiveDrawer(props) {
             setMobileOpen(!mobileOpen);
         }
     };
-    const [selectedIndex, setSelectedIndex] = React.useState(0);
-
-    const handleListItemClick = (event, index) => {
-        setSelectedIndex(index);
-    };
     let navigation = [
-        { name: 'Dashboard', href: '/' },
-        { name: 'About', href: '/pages/about' },
-        { name: 'Projects', href: '/pages/projects' },
-        { name: 'Make my day', href: '#' },
+        { name: 'Dashboard', href: '/', icon:<Dashboard /> },
+        { name: 'About', href: '/pages/about', icon:<InfoIcon /> },
+        { name: 'Make my day', href: '#', icon:<FavoriteIcon /> },
     ]
 
     const drawer = (
         <div>
-            <Toolbar />
-            <Divider />
+            <Toolbar variant='dense' />
+            {/* <Divider color="white" width="90%" sx={{margin:'0 auto'}} /> */}
             <List>
+                <Typography variant='h6' fontWeight={'bold'} px={2} mb={3}>Menu</Typography>
                 {navigation.map((link, index) => (
                     <ListItem key={link.name} disablePadding>
                         <ListItemButton
-                            selected={selectedIndex === index}
-                            onClick={(event) => handleListItemClick(event, index)}
                             href={link.href}>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            <ListItemIcon sx={{color:'white'}}>
+                                {link.icon}
                             </ListItemIcon>
                             <ListItemText
                                 primary={link.name} />
@@ -71,12 +67,13 @@ function ResponsiveDrawer(props) {
                     </ListItem>
                 ))}
             </List>
-            <Divider />
+            <Divider color="white" width="80%" sx={{margin:'16px auto'}} />
             <List>
+                <Typography variant='h6' fontWeight={'bold'} px={2} mb={3}>Categories</Typography>
                 {['All mail', 'Trash', 'Spam'].map((text, index) => (
                     <ListItem key={text} disablePadding>
                         <ListItemButton>
-                            <ListItemIcon>
+                            <ListItemIcon sx={{ color:"white"}}>
                                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                             </ListItemIcon>
                             <ListItemText primary={text} />
@@ -96,7 +93,7 @@ function ResponsiveDrawer(props) {
                     ml: { sm: `${drawerWidth}px` },
                 }}
             >
-                <Toolbar>
+                <Toolbar sx={{backgroundColor:'#182131'}}>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -107,7 +104,7 @@ function ResponsiveDrawer(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        Responsive drawer
+                        Useful Websites
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -125,7 +122,7 @@ function ResponsiveDrawer(props) {
                     onClose={handleDrawerClose}
                     sx={{
                         display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#1E2939', color:'white', borderRight:'1px solid white' },
                     }}
                     slotProps={{
                         root: {
@@ -139,7 +136,7 @@ function ResponsiveDrawer(props) {
                     variant="permanent"
                     sx={{
                         display: { xs: 'none', sm: 'block' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#182131', color:'white', borderRight:'1px solid white' },
                     }}
                     open
                 >
