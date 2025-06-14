@@ -20,11 +20,12 @@ import { Dashboard } from '@mui/icons-material';
 import InfoIcon from '@mui/icons-material/Info';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { websiteCategories } from '../data/Websites';
+import { useRouter } from 'next/navigation';
 
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
-    const { window } = props;
+    // const { window } = props;    
     const { children } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [isClosing, setIsClosing] = React.useState(false);
@@ -48,9 +49,9 @@ function ResponsiveDrawer(props) {
         { name: 'About', href: '/pages/about', icon: <InfoIcon /> },
         { name: 'Make my day', href: '#', icon: <FavoriteIcon /> },
     ]
-
+    const router = useRouter();
     const drawer = (
-        <Box sx={{overflowY: 'auto',scrollbarWidth:'none',}}>
+        <Box sx={{ overflowY: 'auto', scrollbarWidth: 'none', }}>
             <List>
                 <Typography variant='h6' fontWeight={'bold'} px={2} my={2}>Menu</Typography>
                 {navigation.map((link, index) => (
@@ -72,11 +73,14 @@ function ResponsiveDrawer(props) {
                 {websiteCategories.map((categories, index) => (
                     <ListItem key={categories.name} disablePadding>
                         <ListItemButton
-
                             onClick={() => {
-                                const el = document.getElementById(categories.name);
-                                if (el) {
-                                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                if (window.location.pathname !== '/') {
+                                    router.push(`/#${categories.name}`);
+                                } else {
+                                    const el = document.getElementById(categories.name);
+                                    if (el) {
+                                        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                    }
                                 }
                             }}
                         >
