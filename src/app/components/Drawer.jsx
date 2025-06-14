@@ -102,6 +102,7 @@ function ResponsiveDrawer(props) {
                 sx={{
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
                     ml: { sm: `${drawerWidth}px` },
+                    display: { sm: 'none' }
                 }}
             >
                 <Toolbar sx={{ backgroundColor: '#182131' }}>
@@ -114,9 +115,6 @@ function ResponsiveDrawer(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h4" noWrap component="div" fontWeight={'bold'}>
-                        Useful Websites
-                    </Typography>
                 </Toolbar>
             </AppBar>
             <Box
@@ -133,7 +131,7 @@ function ResponsiveDrawer(props) {
                     onClose={handleDrawerClose}
                     sx={{
                         display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#1E2939', color: 'white', borderRight: '1px solid white' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#050505', color: 'white', borderRight: '0px solid white' },
                     }}
                     slotProps={{
                         root: {
@@ -147,7 +145,7 @@ function ResponsiveDrawer(props) {
                     variant="permanent"
                     sx={{
                         display: { xs: 'none', sm: 'block' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#182131', color: 'white', borderRight: '1px solid white' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#050505', color: 'white', borderRight: '0px solid white' },
                     }}
                     open
                 >

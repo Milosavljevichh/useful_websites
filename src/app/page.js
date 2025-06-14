@@ -15,7 +15,7 @@ export default function Home() {
                   {category.cards.map(card => (
                     <article
                       key={card.name}
-                      className="bg-[#94897990] text-white rounded-xl p-4 flex flex-col justify-between gap-4 shadow-md"
+                      className="bg-[transparent] border-solid border-1 border-[#948979] text-white rounded-xl p-4 flex flex-col justify-between gap-4 shadow-md"
                     >
                       <div className="h-full flex items-center gap-4 items-center">
                         <img
