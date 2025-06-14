@@ -12,6 +12,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@font-face {
+  font-family: Main;
+  src: url('/fonts/Sarpanch/Sarpanch-Regular.ttf');
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0A0A0A;
