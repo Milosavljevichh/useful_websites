@@ -1,11 +1,27 @@
 import { Typography } from "@mui/material"
 import { websiteCategories } from "./data/Websites"
 import GlareHover from "./components/GlareHover"
+import TextPressure from "./components/TextPressure"
 
 export default function Home() {
   return (
     <div className="min-h-full">
-      <Typography variant="h4" className="px-4 sm:px-6 lg:px-8" fontFamily={'Main'}>Explore tools, resources, and inspiration in one place.</Typography>
+
+      <div className="px-4 sm:px-6 lg:px-8" style={{ position: 'relative', height: 'fit-content' }}>
+        <TextPressure
+          text="Useful Websites"
+          flex={true}
+          alpha={false}
+          stroke={false}
+          width={true}
+          weight={true}
+          italic={true}
+          textColor="#ffffff"
+          strokeColor="#ff0000"
+          minFontSize={36}
+        />
+      </div>
+      <Typography variant="h4" className="px-4 sm:px-6 lg:px-8" mt={6} fontFamily={'Main'}>Explore tools, resources, and inspiration in one place.</Typography>
       <Typography variant="h5" className="px-4 sm:px-6 lg:px-8" fontFamily={'Main'}>A curated collection of useful websites, organized by category.</Typography>
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         {
@@ -15,7 +31,7 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 py-6 w-full">
                 {category.cards.map(card => (
                   <GlareHover
-                  key={card.name+"glare"}
+                    key={card.name + "glare"}
                     glareColor="#ffffff"
                     glareOpacity={0.3}
                     glareAngle={-30}
