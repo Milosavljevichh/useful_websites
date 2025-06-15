@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-full">
 
-      <div className="px-4 sm:px-6 lg:px-8" style={{ position: 'relative', height: 'fit-content' }}>
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" style={{ position: 'relative', height: 'fit-content' }}>
         <TextPressure
           text="Useful Websites"
           flex={true}
@@ -21,8 +21,8 @@ export default function Home() {
           minFontSize={36}
         />
       </div>
-      <Typography variant="h4" className="px-4 sm:px-6 lg:px-8" mt={6} fontFamily={'Main'}>Explore tools, resources, and inspiration in one place.</Typography>
-      <Typography variant="h5" className="px-4 sm:px-6 lg:px-8" fontFamily={'Main'}>A curated collection of useful websites, organized by category.</Typography>
+      <Typography variant="h4" className="px-4 sm:px-6 lg:px-8 text-center" mt={10} fontFamily={'Main'}>Explore tools, resources, and inspiration in one place.</Typography>
+      <Typography variant="h5" className="px-4 sm:px-6 lg:px-8 text-center" fontFamily={'Main'}>A curated collection of useful websites, organized by category.</Typography>
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         {
           websiteCategories.map(category => (
@@ -44,7 +44,7 @@ export default function Home() {
                       key={card.name}
                       className="h-full w-full bg-[transparent] border-solid border-1 border-[#948979] text-white rounded-xl p-4 flex flex-col justify-between gap-4 shadow-md"
                     >
-                      <div className="h-full flex items-center gap-4 items-center">
+                      <div className="h-full inline-flex items-center justify-start gap-4">
                         <img
                           src={`/icons/${card.icon}`}
                           alt={card.name}
