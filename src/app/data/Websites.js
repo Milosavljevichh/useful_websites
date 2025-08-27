@@ -47,6 +47,7 @@ export const websiteCategories = [
       { name: 'State Diagram Generator', href: 'https://www.eraser.io/ai/state-diagram-generator', description: 'AI State Diagram Generator.', icon: 'configurations.png' },
       { name: 'Stay', href: 'https://staying.fun/en', description: 'Visualize Data Structures & Algorithms in Real Time, an  interactive tool for students, educators, and developers.', icon: 'stay.png' },
       { name: 'Snazzy Maps', href: 'https://snazzymaps.com/', description: 'Snazzy Maps is a repository of different styles for Google Maps aimed towards web designers and developers.', icon: 'snazzymaps.png' },
+      { name: 'Topoexport', href: 'https://topoexport.com/', description: 'Topoexport is a website which lets you export real world maps into 2D pictures or 3D models.', icon: 'topo.png' },
     ],
     icon: <CodeIcon />
   },
@@ -64,6 +65,7 @@ export const websiteCategories = [
       { name: 'GetYarn', href: 'https://getyarn.io', description: 'Search quotes from movies and shows with video snippets.', icon: 'yarn.png' },
       { name: 'AirConsole', href: 'https://airconsole.com', description: 'Play multiplayer games using your phone as a controller.', icon: 'airconsole.png' },
       { name: 'Tools', href: 'https://tooooools.app', description: 'Apply image effects.', icon: 'tools.png' },
+      { name: 'Buildit - For Minecraft', href: 'https://builditapp.com/', description: 'Build it is an online catalog of minecraft building tutorials of anything that you might need in your world.', icon: 'builditapp.png' },
     ],
     icon: <VideogameAssetIcon />
   },
